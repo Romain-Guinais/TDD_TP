@@ -34,18 +34,35 @@ namespace TpTDD.Service
             if (isbn != null)
             {
                 result = databaseBookService.GetBookByIsbn(isbn);
-                if (result == null)
+                if (result == null || areBookInfoComplete(result) == false)
                 {
                     result = webBookService.GetBookByIsbn(isbn);
                 }
-                
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Verify if one property of the book is null 
+        /// </summary>
+        /// <param name="book"></param>
+        /// <returns>true if no properties are null</returns>
+        private bool areBookInfoComplete(Book book)
+        {            
+            bool result = true;
+
+            if (book != null)
+            {
+                foreach (PropertyInfo prop in book.GetType().GetProperties())
+                {
+                    if (prop.GetValue(book) == null) { result = false; }
+                }
             }
 
             return result;
         }
 
 
-
-       
     }
 }
