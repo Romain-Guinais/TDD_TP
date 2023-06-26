@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using TpTDD.Model;
@@ -33,10 +34,18 @@ namespace TpTDD.Service
             if (isbn != null)
             {
                 result = databaseBookService.GetBookByIsbn(isbn);
+                if (result == null)
+                {
+                    result = webBookService.GetBookByIsbn(isbn);
+                }
+                
             }
 
             return result;
         }
 
+
+
+       
     }
 }

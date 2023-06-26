@@ -73,7 +73,6 @@ namespace TpTDDTest
         public void GetBookByIsbnfromOnlyWebServiceShouldReturnBook()
         {
             Book testBook = new Book("XXXX", "book title", "Me", "also Me", new Format("Poche"));
-            _mockBookDataService.Setup(m => m.GetBookByIsbn("XXXX")).Returns(new Book());
             _mockBookWebService.Setup(m => m.GetBookByIsbn("XXXX")).Returns(testBook);
 
             setMockInManager(_mockBookDataService, _mockBookWebService);
