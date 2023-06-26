@@ -83,6 +83,26 @@ namespace TpTDDTest
             book.Should().BeEquivalentTo(testBook);
         }
 
+        /// <summary>
+        /// Book searched by ISBN.
+        /// Test if a book is returned from both DB and webService.
+        /// If it's data are partially stored in the Db and in webService.
+        /// </summary>
+        [TestMethod]
+        public void GetBookByIsbnShouldReturnBook()
+        {
+            Book testBook = new Book("XXXX", "book title", "Me", "also Me", new Format("Poche"));
+            _mockBookDataService.Setup(m => m.GetBookByIsbn("XXXX")).Returns(new Book("XXXX", "book title", null, null, new Format("Poche")));
+            _mockBookWebService.Setup(m => m.GetBookByIsbn("XXXX")).Returns(testBook);
+
+            setMockInManager(_mockBookDataService, _mockBookWebService);
+
+            Book book = manager.GetBookByIsbn("XXXX");
+
+            book.Should().NotBeNull();
+            book.Should().BeEquivalentTo(testBook);
+        }
+
         public void setMockInManager(Mock<IBookDataService> db, Mock<IBookDataService> web)
         {
             manager.databaseBookService = db.Object;
