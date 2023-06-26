@@ -26,5 +26,15 @@ namespace TpTDD.Model
             IsFou = true;
         }
 
+        public Book()
+        {
+            ISBN = "";
+            Title = "";
+            Author = "";
+            Editor = "";
+            Format = null;
+            IsFou = true;
+        }
+
     }
 }
