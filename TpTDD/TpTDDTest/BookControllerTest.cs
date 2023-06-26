@@ -28,6 +28,9 @@ namespace TpTDDTest
             //manager.webBookService = _mockBookWebService.Object;
         } 
 
+        /// <summary>
+        /// Test if getDbBooks return a empty list when db have no books  
+        /// </summary>
         [TestMethod]
         public void GetDbBooksShouldReturnEmptyListIfNoBooksInDbResponse()
         {
@@ -40,6 +43,25 @@ namespace TpTDDTest
             books.Should().NotBeNull();
             books.Should().BeEmpty();
 
+        }
+
+        /// <summary>
+        /// Book searched by ISBN.
+        /// Test if a book is returned from the db.
+        /// If all it's data are stored in db.
+        /// </summary>
+        [TestMethod]
+        public void GetBookByIsbnfromOnlyDbShouldReturnBook()
+        {
+            Book testBook = new Book("XXXX", "book title", "Me", "also Me", new Format("Poche"));
+            _mockBookDataService.Setup(m => m.GetBookByIsbn("")).Returns(testBook);
+
+            setMockInManager(_mockBookDataService, _mockBookWebService);
+
+            Book book = manager.GetBookByIsbn("XXXX");
+
+            book.Should().NotBeNull();
+            book.Should().BeEquivalentTo(testBook);
         }
 
         public void setMockInManager(Mock<IBookDataService> db, Mock<IBookDataService> web)

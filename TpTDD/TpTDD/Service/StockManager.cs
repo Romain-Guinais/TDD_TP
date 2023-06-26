@@ -22,5 +22,14 @@ namespace TpTDD.Service
         }
 
 
+        /// <summary>
+        /// Return the book corresponding to the ISBN
+        /// </summary>
+        /// <returns></returns>
+        public Book GetBookByIsbn(string isbn)
+        {
+            return null;
+        }
+
     }
 }

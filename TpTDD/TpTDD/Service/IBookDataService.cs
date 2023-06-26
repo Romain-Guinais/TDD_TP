@@ -10,5 +10,6 @@ namespace TpTDD.Service
     public interface IBookDataService
     {
         public List<Book> GetBooks();
+        public Book GetBookByIsbn(string isbn);
     }
 }
