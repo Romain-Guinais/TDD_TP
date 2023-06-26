@@ -7,12 +7,8 @@ using TpTDD.Model;
 
 namespace TpTDD.Service
 {
-    public class BookDataService
+    public interface IBookDataService
     {
-        public List<Book> GetBooks()
-        {
-            //TODO
-            return null;
-        }
+        public List<Book> GetBooks();
     }
 }

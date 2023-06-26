@@ -9,13 +9,16 @@ namespace TpTDD.Service
 {
     public class StockManager
     {
-        public BookDataService databaseBookService { get; set; }
-        public BookDataService webBookService { get; set; }
+        public IBookDataService databaseBookService { get; set; }
+        public IBookDataService webBookService { get; set; }
 
+        /// <summary>
+        /// Return the list of all the books in the Database
+        /// </summary>
+        /// <returns></returns>
         public List<Book> GetDbBooks()
-        {
-            // TODO
-            return null;
+        {            
+            return databaseBookService.GetBooks();
         }
 
 

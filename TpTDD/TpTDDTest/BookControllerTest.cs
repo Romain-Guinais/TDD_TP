@@ -13,13 +13,17 @@ namespace TpTDDTest
     public class BookControllerTest
     {
         StockManager manager;
-        Mock<BookDataService> _mockBookDataService;
-        Mock<BookDataService> _mockBookWebService;
+        Mock<IBookDataService> _mockBookDataService;
+        Mock<IBookDataService> _mockBookWebService;
 
         [TestInitialize]
         public void initMocks()
         {
             manager = new StockManager();
+
+            _mockBookDataService = new Mock<IBookDataService>();
+            _mockBookWebService = new Mock<IBookDataService>();
+
             //manager.databaseBookService = _mockBookDataService.Object;
             //manager.webBookService = _mockBookWebService.Object;
         } 
@@ -38,7 +42,7 @@ namespace TpTDDTest
 
         }
 
-        public void setMockInManager(Mock<BookDataService> db, Mock<BookDataService> web)
+        public void setMockInManager(Mock<IBookDataService> db, Mock<IBookDataService> web)
         {
             manager.databaseBookService = db.Object;
             manager.webBookService = web.Object;
