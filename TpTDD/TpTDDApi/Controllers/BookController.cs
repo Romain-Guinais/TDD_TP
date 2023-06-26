@@ -7,6 +7,10 @@ namespace TpTDDApi
     [Route("[book]")]
     public class BookController : ControllerBase
     {
-        
+        public List<Book> GetBooks()
+        {
+            // TODO
+            return null;
+        }
     }
 }

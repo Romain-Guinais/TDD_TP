@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fFR1NfLanfNd1fyY3TKXCjv+hZ/KcrvBv4oddD3U0RwhLOKrdg/JdOZO97P+W5fj1avXCoK36Viy20wPCnb4vg==",
+  "dgSpecHash": "wugh5MbiXh27VWaYD/rOZhomrjooKDTRrv65HL/Lahrf1umTBEEpf0ExUWPCpsQlVJriGZz9WQjZyTrz2f4fAg==",
   "success": true,
   "projectFilePath": "C:\\Global\\Other\\Cours\\TDD\\TPFinal\\TDD_TP\\TpTDD\\TpTDDApi\\TpTDDApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\docto\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\docto\\.nuget\\packages\\fluentassertions\\6.11.0\\fluentassertions.6.11.0.nupkg.sha512",
     "C:\\Users\\docto\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\docto\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\docto\\.nuget\\packages\\moq\\4.18.4\\moq.4.18.4.nupkg.sha512",
@@ -12,7 +13,9 @@
     "C:\\Users\\docto\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\docto\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "C:\\Users\\docto\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
-    "C:\\Users\\docto\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+    "C:\\Users\\docto\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\docto\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+    "C:\\Users\\docto\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
   ],
   "logs": []
 }

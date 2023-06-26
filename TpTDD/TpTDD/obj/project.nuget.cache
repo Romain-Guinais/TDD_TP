@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "tB8OgQMlek3TsagwaYoCwgXYxVEAvr00pBoAI0dAvcm4ha61D2o1GwyzKZc+LZ29iN76dIyMMMMGRUx98abOjg==",
+  "dgSpecHash": "8sVWbHOeG/4qw/qCBQdJ+GTbPYjfPZ3TyGM2cTGS0mBBRKBRTxwcmDctex9NWGtT9dCz1wux8C1LlUhaxdawbQ==",
   "success": true,
   "projectFilePath": "C:\\Global\\Other\\Cours\\TDD\\TPFinal\\TDD_TP\\TpTDD\\TpTDD\\TpTDD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\docto\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\docto\\.nuget\\packages\\fluentassertions\\6.11.0\\fluentassertions.6.11.0.nupkg.sha512",
     "C:\\Users\\docto\\.nuget\\packages\\moq\\4.18.4\\moq.4.18.4.nupkg.sha512",
-    "C:\\Users\\docto\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+    "C:\\Users\\docto\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\docto\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+    "C:\\Users\\docto\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
   ],
   "logs": []
 }
