@@ -28,7 +28,14 @@ namespace TpTDD.Service
         /// <returns></returns>
         public Book GetBookByIsbn(string isbn)
         {
-            return null;
+            Book result = null;
+
+            if (isbn != null)
+            {
+                result = databaseBookService.GetBookByIsbn(isbn);
+            }
+
+            return result;
         }
 
     }
