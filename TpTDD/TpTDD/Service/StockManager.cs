@@ -43,6 +43,12 @@ namespace TpTDD.Service
             return result;
         }
 
+        public bool CreateBook(string isbn, string title, string author, string editor, string FormatName)
+        {
+            return false;
+        }
+
+
         /// <summary>
         /// Verify if one property of the book is null 
         /// </summary>
