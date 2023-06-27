@@ -126,7 +126,7 @@ namespace TpTDDTest
         [TestMethod]
         public void CreateBookWithPartialParamShouldReturnTrue()
         {
-            Book testBook = new Book("XXXX", "book title", "Me", "also Me", new Format("Poche"));
+            Book testBook = new Book("XXXX", "createTitle", "createAuthor", "createEditor", new Format("Broché"));
             _mockBookDataService.Setup(m => m.CreateBook("XXXX", "createTitle", null, null, "Broché")).Returns(false);
             _mockBookWebService.Setup(m => m.CreateBook("XXXX", "createTitle", "createAuthor", "createEditor", "Broché")).Returns(true);
             _mockBookWebService.Setup(m => m.GetBookByIsbn("XXXX")).Returns(testBook);

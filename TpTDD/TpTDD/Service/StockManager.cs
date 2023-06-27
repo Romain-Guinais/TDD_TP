@@ -43,9 +43,30 @@ namespace TpTDD.Service
             return result;
         }
 
+        /// <summary>
+        /// Create a new book
+        /// </summary>
+        /// <param name="isbn"></param>
+        /// <param name="title"></param>
+        /// <param name="author"></param>
+        /// <param name="editor"></param>
+        /// <param name="FormatName"></param>
+        /// <returns>true if book was ceated</returns>
         public bool CreateBook(string isbn, string title, string author, string editor, string FormatName)
         {
-            return false;
+            bool result = false;
+
+            if (isbn != null && isbn != "")
+            {
+                result = databaseBookService.CreateBook(isbn, title, author, editor, FormatName);
+                if (result == false)
+                {
+                    Book book = webBookService.GetBookByIsbn(isbn);
+                    result = webBookService.CreateBook(book.ISBN, book.Title, book.Author, book.Editor, book.Format.Name);
+                }
+            }
+
+            return result;
         }
 
 
