@@ -155,6 +155,41 @@ namespace TpTDDTest
             result.Should().BeFalse();
         }
 
+        /// <summary>
+        /// Update a book whitout is isbn
+        /// Should return false
+        /// </summary>
+        [TestMethod]
+        public void UpdateBookWhitoutIsbnShouldReturnFalse()
+        {
+            _mockBookDataService.Setup(m => m.UpdateBook(null, "title", "author", "editor", "Poche")).Returns(false);
+            _mockBookWebService.Setup(m => m.UpdateBook(null, "title", "author", "editor", "Poche")).Returns(false);
+
+            setMockInManager(_mockBookDataService, _mockBookWebService);
+
+            bool result = manager.UpdateBook(null, "title", "author", "editor", "Poche");
+
+            result.Should().BeFalse();
+        }
+
+        /// <summary>
+        /// Update a book
+        /// Should return true
+        /// </summary>
+        [TestMethod]
+        public void UpdateBookShouldReturnTrue()
+        {
+
+            _mockBookDataService.Setup(m => m.UpdateBook("XXXX", "title", "author", "editor", "Poche")).Returns(false);
+            _mockBookWebService.Setup(m => m.UpdateBook("XXXX", "title", "author", "editor", "Poche")).Returns(false);
+
+            setMockInManager(_mockBookDataService, _mockBookWebService);            
+
+            bool result = manager.UpdateBook(null, "title", "author", "editor", "Poche");
+
+            result.Should().BeTrue();
+        }
+
         public void setMockInManager(Mock<IBookDataService> db, Mock<IBookDataService> web)
         {
             manager.databaseBookService = db.Object;

@@ -71,6 +71,20 @@ namespace TpTDD.Service
 
 
         /// <summary>
+        /// Udate a book
+        /// </summary>
+        /// <param name="isbn"></param>
+        /// <param name="title"></param>
+        /// <param name="author"></param>
+        /// <param name="editor"></param>
+        /// <param name="FormatName"></param>
+        /// <returns>true if book was updated</returns>
+        public bool UpdateBook(string isbn, string title, string author, string editor, string FormatName)
+        {
+            return true;
+        }
+
+        /// <summary>
         /// Verify if one property of the book is null 
         /// </summary>
         /// <param name="book"></param>

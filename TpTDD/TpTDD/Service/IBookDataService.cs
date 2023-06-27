@@ -12,5 +12,6 @@ namespace TpTDD.Service
         public List<Book> GetBooks();
         public Book GetBookByIsbn(string isbn);
         public bool CreateBook(string isbn, string title, string author, string editor, string FormatName);
+        public bool UpdateBook(string isbn, string title, string author, string editor, string FormatName);
     }
 }
