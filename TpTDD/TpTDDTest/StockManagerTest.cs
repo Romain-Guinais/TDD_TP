@@ -189,6 +189,38 @@ namespace TpTDDTest
             result.Should().BeTrue();
         }
 
+        /// <summary>
+        /// Delete a book
+        /// Should return true
+        /// </summary>
+        [TestMethod]
+        public void DeleteBookShouldReturnTrue()
+        {
+            _mockBookDataService.Setup(m => m.DeleteBook("XXXX")).Returns(true);
+
+            setMockInManager(_mockBookDataService, _mockBookWebService);
+
+            bool result = manager.DeleteBook("XXXX");
+
+            result.Should().BeTrue();
+        }
+
+        /// <summary>
+        /// Delete a book without isbn
+        /// Should return false
+        /// </summary>
+        [TestMethod]
+        public void DeleteBookWithoutIsbnshouldreturnFalse()
+        {
+            _mockBookDataService.Setup(m => m.DeleteBook(null)).Returns(false);
+
+            setMockInManager(_mockBookDataService, _mockBookWebService);
+
+            bool result = manager.DeleteBook(null);
+
+            result.Should().BeFalse();
+        }
+
         public void setMockInManager(Mock<IBookDataService> db, Mock<IBookDataService> web)
         {
             manager.databaseBookService = db.Object;

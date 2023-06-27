@@ -52,13 +52,13 @@ namespace TpTDD.Service
         /// <param name="editor"></param>
         /// <param name="FormatName"></param>
         /// <returns>true if book was ceated</returns>
-        public bool CreateBook(string isbn, string title, string author, string editor, string FormatName)
+        public bool CreateBook(string isbn, string title, string author, string editor, string formatName)
         {
             bool result = false;
 
             if (isbn != null && isbn != "")
             {
-                result = databaseBookService.CreateBook(isbn, title, author, editor, FormatName);
+                result = databaseBookService.CreateBook(isbn, title, author, editor, formatName);
                 if (result == false)
                 {
                     Book book = webBookService.GetBookByIsbn(isbn);
@@ -79,16 +79,21 @@ namespace TpTDD.Service
         /// <param name="editor"></param>
         /// <param name="FormatName"></param>
         /// <returns>true if book was updated</returns>
-        public bool UpdateBook(string isbn, string title, string author, string editor, string FormatName)
+        public bool UpdateBook(string isbn, string title, string author, string editor, string formatName)
         {
             bool result = false;
 
             if (isbn != null && isbn != "")
             {
-                result = databaseBookService.UpdateBook(isbn, title, author, editor, FormatName);
+                result = databaseBookService.UpdateBook(isbn, title, author, editor, formatName);
             }
 
             return result;
+        }
+
+        public bool DeleteBook(string isbn)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
