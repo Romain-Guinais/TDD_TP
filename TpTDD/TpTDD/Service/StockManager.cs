@@ -93,7 +93,14 @@ namespace TpTDD.Service
 
         public bool DeleteBook(string isbn)
         {
-            throw new NotImplementedException();
+            bool result = false;
+
+            if (isbn != null && isbn != "")
+            {
+                result = databaseBookService.DeleteBook(isbn);
+            }
+
+            return result;
         }
 
         /// <summary>
