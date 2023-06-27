@@ -81,7 +81,14 @@ namespace TpTDD.Service
         /// <returns>true if book was updated</returns>
         public bool UpdateBook(string isbn, string title, string author, string editor, string FormatName)
         {
-            return true;
+            bool result = false;
+
+            if (isbn != null && isbn != "")
+            {
+                result = databaseBookService.UpdateBook(isbn, title, author, editor, FormatName);
+            }
+
+            return result;
         }
 
         /// <summary>

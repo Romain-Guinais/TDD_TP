@@ -180,12 +180,11 @@ namespace TpTDDTest
         public void UpdateBookShouldReturnTrue()
         {
 
-            _mockBookDataService.Setup(m => m.UpdateBook("XXXX", "title", "author", "editor", "Poche")).Returns(false);
-            _mockBookWebService.Setup(m => m.UpdateBook("XXXX", "title", "author", "editor", "Poche")).Returns(false);
+            _mockBookDataService.Setup(m => m.UpdateBook("XXXX", "title", "author", "editor", "Poche")).Returns(true);
 
             setMockInManager(_mockBookDataService, _mockBookWebService);            
 
-            bool result = manager.UpdateBook(null, "title", "author", "editor", "Poche");
+            bool result = manager.UpdateBook("XXXX", "title", "author", "editor", "Poche");
 
             result.Should().BeTrue();
         }
